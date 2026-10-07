@@ -49,7 +49,7 @@ h1 .w{display:inline-block;opacity:1;padding-bottom:.08em;will-change:transform,
 .hero-orbit{position:absolute;inset:-34px;border:1px solid rgba(34,211,238,.22);border-radius:50%;transform:rotate(-12deg);pointer-events:none;animation:orbit 12s linear infinite}
 .hero-orbit:before,.hero-orbit:after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--c1);box-shadow:0 0 24px var(--c1);top:8%;left:17%}
 .hero-orbit:after{width:7px;height:7px;background:var(--c3);box-shadow:0 0 22px var(--c3);top:auto;left:auto;right:13%;bottom:12%}
-.hero-float{position:absolute;z-index:3;padding:11px 14px;border:1px solid rgba(255,255,255,.16);border-radius:15px;background:rgba(8,8,14,.72);backdrop-filter:blur(14px);box-shadow:0 18px 45px rgba(0,0,0,.35);font:600 11px Unbounded;letter-spacing:.02em;animation:heroFloat 5s ease-in-out infinite}
+.hero-float{position:absolute;z-index:3;padding:7px 9px;border:1px solid rgba(255,255,255,.16);border-radius:11px;background:rgba(8,8,14,.78);backdrop-filter:blur(14px);box-shadow:0 12px 28px rgba(0,0,0,.32);font:600 8px Unbounded;letter-spacing:.01em;white-space:nowrap;animation:heroFloat 5s ease-in-out infinite}
 .hero-float.one{left:-38px;top:20%;color:var(--c1)}
 .hero-float.two{right:-34px;bottom:24%;color:#fff;animation-delay:-2.2s}
 .hero-float.three{left:-24px;bottom:7%;color:var(--c3);animation-delay:-3.5s}
@@ -100,7 +100,7 @@ h2{font-size:clamp(30px,4.4vw,58px)}
 footer{padding:30px 0;border-top:1px solid var(--line);color:var(--mute);font-size:14px;text-align:center}
 #cur{position:fixed;width:340px;height:340px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(124,58,237,.22),transparent 65%);transform:translate(-50%,-50%);left:-999px}
 .rv{opacity:1;transform:none}
-@media(max-width:860px){.hero .wrap>div:first-child{margin-top:0}.hero .wrap,.two{grid-template-columns:1fr}.photo{max-width:340px;margin-inline:auto}.hero-orbit{inset:-22px}.hero-float.one{left:-10px;top:12%}.hero-float.two{right:-10px;bottom:28%}.hero-float.three{right:-10px;left:auto;bottom:7px}nav a:not(.hire){display:none}.card.big{grid-column:auto}section{padding:80px 0}}
+@media(max-width:860px){.hero .wrap>div:first-child{margin-top:0}.hero .wrap,.two{grid-template-columns:1fr}.photo{max-width:340px;margin-inline:auto}.hero-orbit{inset:-22px}.hero-float.one{left:12px;top:12%}.hero-float.two{right:12px;bottom:28%}.hero-float.three{right:12px;left:auto;bottom:7px}nav a:not(.hire){display:none}.card.big{grid-column:auto}section{padding:80px 0}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,h1 .w{opacity:1!important;transform:none!important}}
 
 /* ===== Featured + Web Projects ===== */
