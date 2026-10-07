@@ -258,7 +258,7 @@ const tools=['Photoshop','Illustrator','InDesign','Canva','CapCut','ElevenLabs',
 /* ============================================================ */
 const $=s=>document.querySelector(s), RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
 $('#mq').innerHTML=[...tools,...tools].map(t=>`<span>${t}</span>`).join('');
-$('#grid').innerHTML=projects.map(p=>`<a class="card rv${p.big?' big':''}" href="${p.l.startsWith('http')?p.l:G+p.l}" target="_blank" rel="noopener"><div class="fall"></div><img src="${B}${p.i}" alt="${p.t}" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.parentElement.querySelector('.fall').style.opacity='.55'"><div class="cap"><b>${p.t}</b><small>${p.k}</small></div></a>`).join('');
+$('#grid').innerHTML=projects.map(p=>`<a class="card rv${p.big?' big':''}" href="${B}${p.i}" target="_blank" rel="noopener"><div class="fall"></div><img src="${B}${p.i}" alt="${p.t}" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.parentElement.querySelector('.fall').style.opacity='.55'"><div class="cap"><b>${p.t}</b><small>${p.k}</small></div></a>`).join('');
 $('#sk').innerHTML=skills.map(s=>`<div class="sk rv"><div><span>${s[0]}</span><span>${s[1]}%</span></div><div class="bar"><i data-w="${s[1]}"></i></div></div>`).join('');
 
 /* headline: word by word */
