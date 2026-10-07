@@ -91,6 +91,27 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--mute);font-si
 .rv{opacity:0;transform:translateY(40px)}
 @media(max-width:860px){.hero .wrap>div:first-child{margin-top:0}.hero .wrap,.two{grid-template-columns:1fr}.photo{max-width:340px}nav a:not(.hire){display:none}.card.big{grid-column:auto}section{padding:80px 0}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,h1 .w{opacity:1!important;transform:none!important}}
+
+/* ===== Featured + Web Projects ===== */
+.project-intro{color:var(--mute);max-width:650px;margin-top:16px}
+.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.project-card{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:28px;border:1px solid var(--line);border-radius:22px;background:var(--card);min-height:260px;transition:transform .3s,border-color .3s,background .3s}
+.project-card:hover{transform:translateY(-6px);border-color:var(--c2);background:rgba(255,255,255,.06)}
+.project-icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--grad);font:800 14px Unbounded;color:#fff;box-shadow:0 12px 35px -18px var(--c3)}
+.project-type,.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--c1);font-weight:700}
+.project-card h3,.web-card h3{font-size:22px;margin:8px 0 10px}
+.project-card p,.web-card p{color:var(--mute);font-size:15px}
+.project-tags,.web-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.project-tags span,.web-meta span{padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--mute);font-size:12px}
+.project-links,.web-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.project-links a,.web-actions a{padding:9px 14px;border:1px solid var(--line);border-radius:999px;font-size:13px;font-weight:700}
+.project-links a.primary,.web-actions a.primary{background:var(--grad);border-color:transparent;color:#fff}
+.web-projects{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.web-card{padding:30px;border:1px solid var(--line);border-radius:22px;background:var(--card);min-height:240px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .3s,border-color .3s}
+.web-card:hover{transform:translateY(-6px);border-color:var(--c1)}
+.web-card.feature{grid-column:span 2;min-height:280px;background:linear-gradient(135deg,rgba(34,211,238,.08),rgba(124,58,237,.08),rgba(255,46,147,.08))}
+@media(max-width:900px){.featured-grid{grid-template-columns:1fr}.web-projects{grid-template-columns:1fr}.web-card.feature{grid-column:auto}}
+
 </style>
 </head>
 <body>
@@ -131,13 +152,16 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--mute);font-si
 <article class="project-card rv"><div class="project-icon">CP</div><div><div class="project-type">AI Career Platform</div><h3>CareerPilot</h3><p>AI Career Suite for CV building, job search, job matching and career preparation.</p><div class="project-tags"><span>UI/UX</span><span>AI</span><span>Web App</span><span>Supabase</span></div><div class="project-links"><a class="primary" href="https://careerpilot.mohammadhariscom7.workers.dev/" target="_blank" rel="noopener">Live Project ↗</a><a href="https://github.com/haris730/careerpilot" target="_blank" rel="noopener">GitHub</a></div></div></article>
 <article class="project-card rv"><div class="project-icon">KV</div><div><div class="project-type">E-commerce Website</div><h3>Kick Vibes</h3><p>Modern footwear storefront focused on product presentation and mobile-first shopping.</p><div class="project-tags"><span>E-commerce</span><span>UI Design</span><span>Cloudflare</span></div><div class="project-links"><a class="primary" href="https://kickvibe.pages.dev/" target="_blank" rel="noopener">Live Project ↗</a><a href="https://github.com/haris730/kickvibe" target="_blank" rel="noopener">GitHub</a></div></div></article>
 <article class="project-card rv"><div class="project-icon">RS</div><div><div class="project-type">Fashion Website</div><h3>RESHAM</h3><p>Luxury-inspired Pakistani women's fashion experience with an atelier-style visual direction.</p><div class="project-tags"><span>Fashion</span><span>Web Design</span><span>Supabase</span></div><div class="project-links"><a class="primary" href="https://resham.pages.dev/" target="_blank" rel="noopener">Live Project ↗</a></div></div></article>
-</div></div></section>\n<section id="web-projects"><div class="wrap">
+<article class="project-card rv"><div class="project-icon">ZR</div><div><div class="project-type">Web Application</div><h3>Zarish</h3><p>Custom web project focused on a modern digital experience and responsive presentation.</p><div class="project-tags"><span>Web Design</span><span>Web App</span><span>Cloudflare</span></div><div class="project-links"><a class="primary" href="https://zarish.mh3201254.workers.dev/" target="_blank" rel="noopener">Live Project ↗</a></div></div></article>
+</div></div></section>
+<section id="web-projects"><div class="wrap">
 <div class="head rv"><div><h2>Web <span class="g">projects</span></h2><p class="project-intro">Selected websites and applications where design, content and implementation come together.</p></div></div>
 <div class="web-projects">
 <div class="web-card feature rv"><div><div class="eyebrow">Featured application</div><h3>CareerPilot — AI Career Suite</h3><p>A professional career platform combining CV tools, job discovery, job matching, AI writing and interview preparation.</p><div class="web-meta"><span>Web App</span><span>AI Career Tools</span><span>Supabase</span><span>Cloudflare</span></div></div><div class="web-actions"><a class="primary" href="https://careerpilot.mohammadhariscom7.workers.dev/" target="_blank" rel="noopener">Open Live App ↗</a><a href="https://github.com/haris730/careerpilot" target="_blank" rel="noopener">View GitHub</a></div></div>
 <div class="web-card rv"><div><div class="eyebrow">E-commerce</div><h3>Kick Vibes</h3><p>Footwear storefront with a bold product-led visual experience.</p></div><div class="web-actions"><a class="primary" href="https://kickvibe.pages.dev/" target="_blank" rel="noopener">Live Website ↗</a></div></div>
 <div class="web-card rv"><div><div class="eyebrow">Fashion</div><h3>RESHAM</h3><p>Luxury Pakistani fashion website concept built around a premium editorial feel.</p></div><div class="web-actions"><a class="primary" href="https://resham.pages.dev/" target="_blank" rel="noopener">Live Website ↗</a></div></div>
-</div></div></section>\n<section id="path"><div class="wrap two">
+</div></div></section>
+<section id="path"><div class="wrap two">
 <div class="rv"><h2>Where I've <span class="g">worked</span></h2><p class="sub" style="margin-top:18px">Three design roles, each with a different kind of brief.</p></div>
 <div class="tl">
 <div class="job rv"><h3>Graphic Designer</h3><em>Eco Technologies</em><p>Designed and refined dashboard interfaces for internal tools.</p></div>
@@ -173,7 +197,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--mute);font-si
 <script src="https://cdn.jsdelivr.net/npm/motion@11.18.2/dist/motion.js"></script>
 <script>
 /* ====== EDIT HERE: projects (image, title, type, link) ====== */
-const B='https://mir-s3-cdn-cf.behance.net/projects/404/', G='https://www.behance.net/gallery/';
+const B='https://mir-s3-cdn-cf.behance.net/project_modules/disp/', G='https://www.behance.net/gallery/';
 const projects=[
 {i:'967732255082167.Y3JvcCwxNjAwLDEyNTEsMCw1NzQ.jpg',t:'Kids Fashion Pinterest Ad Designs',k:'Pinterest ads',l:'255082167/Kids-Fashion-Pinterest-Ad-Designs',big:1},
 {i:'0dd5d0239697781.Y3JvcCwxMDgwLDg0NCwwLDExNw.png',t:'Carousel Post Design',k:'Social media',l:'239697781/carousel-post-design'},
@@ -188,7 +212,7 @@ const tools=['Photoshop','Illustrator','InDesign','Canva','CapCut','ElevenLabs',
 /* ============================================================ */
 const $=s=>document.querySelector(s), RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
 $('#mq').innerHTML=[...tools,...tools].map(t=>`<span>${t}</span>`).join('');
-$('#grid').innerHTML=projects.map(p=>`<a class="card rv${p.big?' big':''}" href="${G}${p.l}" target="_blank" rel="noopener"><div class="fall"></div><img src="${B}${p.i}" alt="${p.t}" loading="lazy" referrerpolicy="no-referrer"><div class="cap"><b>${p.t}</b><small>${p.k}</small></div></a>`).join('');
+$('#grid').innerHTML=projects.map(p=>`<a class="card rv${p.big?' big':''}" href="${G}${p.l}" target="_blank" rel="noopener"><div class="fall"></div><img src="${B}${p.i}" alt="${p.t}" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none';this.parentElement.querySelector('.fall').style.opacity='.55'"><div class="cap"><b>${p.t}</b><small>${p.k}</small></div></a>`).join('');
 $('#sk').innerHTML=skills.map(s=>`<div class="sk rv"><div><span>${s[0]}</span><span>${s[1]}%</span></div><div class="bar"><i data-w="${s[1]}"></i></div></div>`).join('');
 
 /* headline: word by word */
