@@ -34,7 +34,7 @@ nav a.hire{background:var(--grad);color:#fff;font-weight:700}
 @keyframes p{70%{box-shadow:0 0 0 10px transparent}}
 h1{font-size:clamp(38px,6.4vw,84px);margin:22px 0;font-weight:800}
 h1 .w{display:inline-block;opacity:0;transform:translateY(60px) rotateX(-50deg)}
-.lead{max-width:520px;color:var(--mute);font-size:19px;margin-top:16px}
+.lead{max-width:520px;color:var(--mute);font-size:19px;margin-top:28px}
 .btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
 .btn{padding:15px 28px;border-radius:99px;font-weight:700;border:1px solid var(--line);transition:.3s;display:inline-block}
 .btn.p{background:var(--grad);border:0;box-shadow:0 10px 40px -10px var(--c3)}
@@ -179,7 +179,7 @@ const h=$('#t');h.innerHTML=h.textContent.split(' ').map(w=>`<span class="w">${w
 const M=window.Motion;
 if(M&&!RM){
  M.animate('h1 .w',{opacity:1,transform:'none'},{delay:M.stagger(.09,{startDelay:.3}),duration:.9,easing:[.2,.8,.2,1]});
- M.animate('.hero .pill,.lead,.btns,.photo',{opacity:[0,1],y:[30,0]},{delay:M.stagger(.12,{startDelay:.9}),duration:.8});
+ M.animate('.hero .pill,.btns,.photo',{opacity:[0,1],y:[30,0]},{delay:M.stagger(.12,{startDelay:.9}),duration:.8});
  M.inView('.rv',en=>{const el=en.target||en;M.animate(el,{opacity:1,transform:'none'},{duration:.8,easing:[.2,.8,.2,1]})},{margin:'0px 0px -10% 0px'});
  M.inView('.bar',en=>{const el=en.target||en;const i=el.firstElementChild;M.animate(i,{width:i.dataset.w+'%'},{duration:1.2,easing:[.2,.8,.2,1]})});
 }else{document.querySelectorAll('.rv,h1 .w').forEach(e=>{e.style.opacity=1;e.style.transform='none'});document.querySelectorAll('.bar i').forEach(i=>i.style.width=i.dataset.w+'%')}
