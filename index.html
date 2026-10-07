@@ -109,6 +109,17 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--mute);font-si
 .web-projects{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
 .web-card{padding:30px;border:1px solid var(--line);border-radius:22px;background:var(--card);min-height:240px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .3s,border-color .3s}
 .web-card:hover{transform:translateY(-6px);border-color:var(--c1)}
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.case-card{position:relative;padding:30px;border:1px solid var(--line);border-radius:22px;background:var(--card);min-height:300px;overflow:hidden;transition:transform .3s,border-color .3s,background .3s}
+.case-card:after{content:"";position:absolute;right:-55px;bottom:-75px;width:170px;height:170px;border-radius:50%;background:var(--grad);opacity:.08;filter:blur(10px)}
+.case-card:hover{transform:translateY(-6px);border-color:var(--c2);background:rgba(255,255,255,.06)}
+.case-number{font:800 12px Unbounded;color:var(--c1);margin-bottom:46px}
+.case-card h3{font-size:22px;margin:8px 0 12px}
+.case-card p{color:var(--mute);font-size:15px}
+.case-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.case-meta span{padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--mute);font-size:12px}
+@media(max-width:900px){.case-grid{grid-template-columns:1fr}}
+
 .web-card.feature{grid-column:span 2;min-height:280px;background:linear-gradient(135deg,rgba(34,211,238,.08),rgba(124,58,237,.08),rgba(255,46,147,.08))}
 @media(max-width:900px){.featured-grid{grid-template-columns:1fr}.web-projects{grid-template-columns:1fr}.web-card.feature{grid-column:auto}}
 
@@ -161,6 +172,14 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--mute);font-si
 <div class="web-card rv"><div><div class="eyebrow">E-commerce</div><h3>Kick Vibes</h3><p>Footwear storefront with a bold product-led visual experience.</p></div><div class="web-actions"><a class="primary" href="https://kickvibe.pages.dev/" target="_blank" rel="noopener">Live Website ↗</a></div></div>
 <div class="web-card rv"><div><div class="eyebrow">Fashion</div><h3>RESHAM</h3><p>Luxury Pakistani fashion website concept built around a premium editorial feel.</p></div><div class="web-actions"><a class="primary" href="https://resham.pages.dev/" target="_blank" rel="noopener">Live Website ↗</a></div></div>
 </div></div></section>
+<section id="case-studies"><div class="wrap">
+<div class="head rv"><div><h2>Case <span class="g">studies</span></h2><p class="project-intro">Selected work grouped around the services I can deliver for brands, e-commerce businesses and digital products.</p></div></div>
+<div class="case-grid">
+<article class="case-card rv"><div class="case-number">01</div><div><div class="eyebrow">Graphic Design &amp; Video</div><h3>Visual content that gets attention</h3><p>Social media posts, carousel designs, print creatives and short-form video content built for clear communication and strong visual impact.</p><div class="case-meta"><span>Photoshop</span><span>Canva</span><span>CapCut</span><span>Social Media</span><span>Print</span></div></div></article>
+<article class="case-card rv"><div class="case-number">02</div><div><div class="eyebrow">E-commerce</div><h3>Product-focused creative for online stores</h3><p>E-commerce visuals, product creatives and promotional designs created to present products clearly across social media, ads and digital storefronts.</p><div class="case-meta"><span>E-commerce</span><span>Product Creatives</span><span>Ads</span><span>Social Media</span></div></div></article>
+<article class="case-card rv"><div class="case-number">03</div><div><div class="eyebrow">AI &amp; Web Design</div><h3>Digital products from idea to interface</h3><p>Responsive web experiences and AI-powered product interfaces, including CareerPilot and other web projects where design and implementation work together.</p><div class="case-meta"><span>UI/UX</span><span>Web Design</span><span>AI</span><span>Cloudflare</span><span>Supabase</span></div></div></article>
+</div></div></section>
+
 <section id="path"><div class="wrap two">
 <div class="rv"><h2>Where I've <span class="g">worked</span></h2><p class="sub" style="margin-top:18px">Three design roles, each with a different kind of brief.</p></div>
 <div class="tl">
