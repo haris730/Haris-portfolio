@@ -11,8 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--ink:#f4f4f8;--mute:#9a9aae;--line:rgba(255,255,255,.12);--c1:#22d3ee;--c2:#7c3aed;--c3:#ff2e93;--c4:#ffb347;
---grad:linear-gradient(110deg,var(--c1),var(--c2) 45%,var(--c3));--card:rgba(255,255,255,.04)}
+:root{--bg:#000;--ink:#f4f4f8;--mute:#9a9aae;--line:rgba(255,255,255,.12);--c1:#22d3ee;--c2:#7c3aed;--c3:#ff2e93;--c4:#ffb347;--grad:linear-gradient(110deg,var(--c1),var(--c2) 45%,var(--c3));--card:rgba(255,255,255,.04)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font:400 17px/1.65 Manrope,system-ui,sans-serif;overflow-x:hidden}
@@ -143,7 +142,7 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--mute);font-si
 <img class="rv" src="img/haris-about.jpg" alt="Mohammad Haris in a retro studio portrait" loading="lazy">
 <div class="rv"><h2>Designer. <span class="g">Builder.</span></h2>
 <p style="margin-top:22px">I started with a Mechanical Engineering diploma and a 6-month graphic design course, then learned the rest by shipping real work for real clients.</p>
-<p>Alongside design jobs I run my own online projects: a Pinterest affiliate account, a sneaker resale brand and a YouTube channel. So I understand what a post has to do to sell, not only how it looks.</p>
+<p>Alongside design jobs, I run my own online projects: a Pinterest affiliate account, a sneaker resale brand and a YouTube channel. I also create and edit videos using CapCut, and build e-commerce stores, AI-powered websites and apps. So I understand what digital content has to do to attract attention and sell, not only how it looks.</p>
 <div class="ven"><a href="https://www.pinterest.com/TrendingDeals26/" target="_blank" rel="noopener"><b>TrendingDeals26</b><span>Pinterest content &amp; pins</span></a><a href="https://www.behance.net/harisgraphic" target="_blank" rel="noopener"><b>Behance</b><span>Full design portfolio</span></a></div>
 </div></div></section>
 
@@ -168,8 +167,7 @@ const projects=[
 {i:'9fb82b214515919.Y3JvcCwyODc2LDIyNTAsNjQsMA.jpg',t:'Flyer Design',k:'Print',l:'214515919/flyer-design'},
 {i:'6372c3239697045.Y3JvcCwxMDgwLDg0NCwwLDExNw.jpg',t:'Social Media Post Design',k:'Social media',l:'239697045/social-meya-post-design'},
 {i:'a81838239697647.Y3JvcCwxMDgwLDg0NCwwLDExNw.png',t:'Carousel Post',k:'Social media',l:'239697647/carousel-post'},
-{i:'a3e93f213109791.Y3JvcCw4NTcsNjcxLDMxOCww.jpg',t:'Post Design',k:'Social media',l:'213109791/post-design'}
-];
+{i:'a3e93f213109791.Y3JvcCw4NTcsNjcxLDMxOCww.jpg',t:'Post Design',k:'Social media',l:'213109791/post-design'}];
 const skills=[['Graphic design',90],['Adobe Photoshop',88],['Social media design',92],['Canva',90],['Video editing (CapCut)',78],['E-commerce visuals',82],['Illustrator & InDesign',72]];
 const tools=['Photoshop','Illustrator','InDesign','Canva','CapCut','ElevenLabs','Social','Print','Dashboards','E-commerce'];
 /* ============================================================ */
@@ -177,8 +175,6 @@ const $=s=>document.querySelector(s), RM=matchMedia('(prefers-reduced-motion:red
 $('#mq').innerHTML=[...tools,...tools].map(t=>`<span>${t}</span>`).join('');
 $('#grid').innerHTML=projects.map(p=>`<a class="card rv${p.big?' big':''}" href="${G}${p.l}" target="_blank" rel="noopener"><div class="fall"></div><img src="${B}${p.i}" alt="${p.t}" loading="lazy" referrerpolicy="no-referrer"><div class="cap"><b>${p.t}</b><small>${p.k}</small></div></a>`).join('');
 $('#sk').innerHTML=skills.map(s=>`<div class="sk rv"><div><span>${s[0]}</span><span>${s[1]}%</span></div><div class="bar"><i data-w="${s[1]}"></i></div></div>`).join('');
-
-/* headline: word by word */
 const h=$('#t');h.innerHTML=h.textContent.split(' ').map(w=>`<span class="w">${w}</span>`).join(' ');
 const M=window.Motion;
 if(M&&!RM){
@@ -187,50 +183,20 @@ if(M&&!RM){
  M.inView('.rv',en=>{const el=en.target||en;M.animate(el,{opacity:1,transform:'none'},{duration:.8,easing:[.2,.8,.2,1]})},{margin:'0px 0px -10% 0px'});
  M.inView('.bar',en=>{const el=en.target||en;const i=el.firstElementChild;M.animate(i,{width:i.dataset.w+'%'},{duration:1.2,easing:[.2,.8,.2,1]})});
 }else{document.querySelectorAll('.rv,h1 .w').forEach(e=>{e.style.opacity=1;e.style.transform='none'});document.querySelectorAll('.bar i').forEach(i=>i.style.width=i.dataset.w+'%')}
-
 setTimeout(()=>{document.querySelectorAll('.rv').forEach(e=>{if(getComputedStyle(e).opacity<.05){e.style.opacity=1;e.style.transform='none'}});document.querySelectorAll('.bar i').forEach(i=>{if(!i.style.width||i.style.width==='0px')i.style.width=i.dataset.w+'%'})},6000);
-/* 3D tilt: photo + cards */
 function tilt(el,max){el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`rotateY(${x*max}deg) rotateX(${-y*max}deg)`});el.addEventListener('pointerleave',()=>el.style.transform='')}
 if(!RM){tilt($('#ph'),14);document.querySelectorAll('.card').forEach(c=>tilt(c,10))}
 const cur=$('#cur');addEventListener('pointermove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
-
-/* WebGL: gradient liquid orb + particles */
 (function(){
  if(!window.THREE)return;
  const cv=$('#gl'),r=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
- r.setPixelRatio(Math.min(devicePixelRatio,2));
- const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(50,1,.1,100);cam.position.z=6;
- const mat=new THREE.ShaderMaterial({uniforms:{t:{value:0}},
- vertexShader:`uniform float t;varying vec3 n;varying float d;
- float h(vec3 p){return sin(p.x*2.1+t)*sin(p.y*2.3+t*1.2)*sin(p.z*2.0+t*.8);}
- void main(){n=normal;d=h(position);vec3 p=position+normal*d*.38;gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.);}`,
- fragmentShader:`varying vec3 n;varying float d;
- void main(){vec3 a=vec3(.13,.83,.93),b=vec3(.49,.23,.93),c=vec3(1.,.18,.58);
- float k=n.y*.5+.5+d*.6;vec3 col=mix(mix(a,b,smoothstep(0.,.5,k)),c,smoothstep(.5,1.,k));
- float f=pow(1.-abs(n.z),2.);gl_FragColor=vec4(col+f*.5,.92);}`,transparent:true});
- const orb=new THREE.Mesh(new THREE.IcosahedronGeometry(1.7,48),mat);
- const wire=new THREE.Mesh(new THREE.IcosahedronGeometry(2.5,2),new THREE.MeshBasicMaterial({color:0x7c3aed,wireframe:true,transparent:true,opacity:.18}));
- const ring=new THREE.Mesh(new THREE.TorusGeometry(3.1,.012,8,200),new THREE.MeshBasicMaterial({color:0x22d3ee}));
- const g=new THREE.Group();g.add(orb,wire,ring);sc.add(g);
- const N=700,pos=new Float32Array(N*3);for(let i=0;i<N*3;i++)pos[i]=(Math.random()-.5)*26;
- const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pos,3));
- const pts=new THREE.Points(pg,new THREE.PointsMaterial({size:.04,color:0xff2e93,transparent:true,opacity:.7}));sc.add(pts);
- let mx=0,my=0,sy=0;
- addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
- addEventListener('scroll',()=>sy=scrollY/innerHeight);
- function size(){r.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}
- addEventListener('resize',size);size();
- const clk=new THREE.Clock();
- (function loop(){
-  const t=clk.getElapsedTime();mat.uniforms.t.value=RM?0:t;
-  const wide=innerWidth>860, tx=wide?2.9:0, ty=wide?0:1.8;
-  g.position.x+=((tx+mx*.8)-g.position.x)*.05;
-  g.position.y+=((ty-my*.6-sy*2.2)-g.position.y)*.05;
-  g.rotation.y=t*.15+sy*1.5;g.rotation.x=sy*.8;ring.rotation.x=t*.3;ring.rotation.y=t*.2;wire.rotation.z=t*.05;
-  const s=1-Math.min(sy,2)*.18;g.scale.setScalar(s*(wide?1:.7));
-  pts.rotation.y=t*.02+sy*.3;cam.position.x+=((mx*.8)-cam.position.x)*.03;
-  r.render(sc,cam);if(!RM)requestAnimationFrame(loop);
- })();
+ r.setPixelRatio(Math.min(devicePixelRatio,2));const sc=new THREE.Scene(),cam=new THREE.PerspectiveCamera(50,1,.1,100);cam.position.z=6;
+ const mat=new THREE.ShaderMaterial({uniforms:{t:{value:0}},vertexShader:`uniform float t;varying vec3 n;varying float d;float h(vec3 p){return sin(p.x*2.1+t)*sin(p.y*2.3+t*1.2)*sin(p.z*2.0+t*.8);}void main(){n=normal;d=h(position);vec3 p=position+normal*d*.38;gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.);}`,fragmentShader:`varying vec3 n;varying float d;void main(){vec3 a=vec3(.13,.83,.93),b=vec3(.49,.23,.93),c=vec3(1.,.18,.58);float k=n.y*.5+.5+d*.6;vec3 col=mix(mix(a,b,smoothstep(0.,.5,k)),c,smoothstep(.5,1.,k));float f=pow(1.-abs(n.z),2.);gl_FragColor=vec4(col+f*.5,.92);}`,transparent:true});
+ const orb=new THREE.Mesh(new THREE.IcosahedronGeometry(1.7,48),mat),wire=new THREE.Mesh(new THREE.IcosahedronGeometry(2.5,2),new THREE.MeshBasicMaterial({color:0x7c3aed,wireframe:true,transparent:true,opacity:.18})),ring=new THREE.Mesh(new THREE.TorusGeometry(3.1,.012,8,200),new THREE.MeshBasicMaterial({color:0x22d3ee}));
+ const g=new THREE.Group();g.add(orb,wire,ring);sc.add(g);const N=700,pos=new Float32Array(N*3);for(let i=0;i<N*3;i++)pos[i]=(Math.random()-.5)*26;const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pos,3));const pts=new THREE.Points(pg,new THREE.PointsMaterial({size:.04,color:0xff2e93,transparent:true,opacity:.7}));sc.add(pts);
+ let mx=0,my=0,sy=0;addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});addEventListener('scroll',()=>sy=scrollY/innerHeight);
+ function size(){r.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}addEventListener('resize',size);size();const clk=new THREE.Clock();
+ (function loop(){const t=clk.getElapsedTime();mat.uniforms.t.value=RM?0:t;const wide=innerWidth>860,tx=wide?2.9:0,ty=wide?0:1.8;g.position.x+=((tx+mx*.8)-g.position.x)*.05;g.position.y+=((ty-my*.6-sy*2.2)-g.position.y)*.05;g.rotation.y=t*.15+sy*1.5;g.rotation.x=sy*.8;ring.rotation.x=t*.3;ring.rotation.y=t*.2;wire.rotation.z=t*.05;const s=1-Math.min(sy,2)*.18;g.scale.setScalar(s*(wide?1:.7));pts.rotation.y=t*.02+sy*.3;cam.position.x+=((mx*.8)-cam.position.x)*.03;r.render(sc,cam);if(!RM)requestAnimationFrame(loop)})();
 })();
 </script>
 </body>
